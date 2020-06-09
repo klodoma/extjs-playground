@@ -1,12 +1,23 @@
-Ext.define('App1.view.home.HomeView',{
-	xtype: 'homeview',
-	cls: 'homeview',
-	controller: {type: 'homeviewcontroller'},
-	viewModel: {type: 'homeviewmodel'},
-	requires: [],
-	extend: 'Ext.Container',
-  scrollable: true,
-  html: `<div style="user-select: text !important;">Welcome to the Ext JS 7.2 Modern Desktop Template Application!
+Ext.define('App1.view.home.HomeView', {
+    xtype: 'homeview',
+    cls: 'homeview',
+    controller: { type: 'homeviewcontroller' },
+    viewModel: { type: 'homeviewmodel' },
+    requires: [],
+    extend: 'Ext.Container',
+    scrollable: true,
+	initialize: function(){
+    	const me = this;
+		me.on('initialize', function () {
+			let html = me.getHtml();
+			let jquery = typeof ($) !== 'undefined';
+			let underscore = typeof (_) !== 'undefined';
+			html += "Jquery" + jquery + "<br>";
+			html += "Underscore" + underscore;
+			me.setHtml(html);
+		});
+	},
+    html: `<div style="user-select: text !important;">Welcome to the Ext JS 7.2 Modern Desktop Template Application!
 <br><br>
 This template has the standard architecture for a desktop application
 <br>
