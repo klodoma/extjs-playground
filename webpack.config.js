@@ -1,5 +1,6 @@
 const path = require('path');
-const ExtWebpackPlugin = require('@sencha/ext-webpack-plugin');
+//const ExtWebpackPlugin = require('@sencha/ext-webpack-plugin');
+const ExtWebpackPlugin = require('./node_modules_local/@sencha/ext-webpack-plugin/dist/index.js');
 const portfinder = require('portfinder');
 
 module.exports = async function (env) {
@@ -21,6 +22,7 @@ module.exports = async function (env) {
   var contextFolder = get('contextFolder', './' + app)
   var entryFile     = get('entryFile',     './index.js')
   var outputFolder  = get('outputFolder',  './' + app)
+  var baseFolder  = get('baseFolder',  './')
   var toolkit       = get('toolkit',       'modern')
   var theme         = get('theme',         'theme-material')
   var packages      = get('packages',      ['treegrid'])
@@ -44,12 +46,14 @@ module.exports = async function (env) {
   const bundleFormat = isProd ? "[name].[hash].js" : "[name].js";
 
   // Using Live Reload with a root context directory, necessary for Sencha Cmd, requires these folders be ignored 
+  //const ignoreFolders = [path.resolve(__dirname, './generatedFiles'), path.resolve(__dirname, './build'), 'node_modules/**']
   const ignoreFolders = [path.resolve(__dirname, './generatedFiles'), path.resolve(__dirname, './build')]
 
   portfinder.basePort = (env && env.port) || 1962
   return portfinder.getPortPromise().then(port => {
     const plugins = [
       new ExtWebpackPlugin({
+        app: app,
         framework: framework,
         toolkit: toolkit,
         theme: theme,
@@ -71,7 +75,11 @@ module.exports = async function (env) {
       context: path.join(__dirname, contextFolder),
       entry: entryFile,
       output: {
-        path: path.join(__dirname, outputFolder),
+        //path: path.join(__dirname, outputFolder),
+        //publicPath: path.join(__dirname, outputFolder),
+        path: path.join(__dirname, './' + app),
+        publicPath: path.join(__dirname, './' + app),
+        //publicPath: path.join(__dirname, './'),
         filename: bundleFormat
       },
       plugins: plugins,
@@ -83,12 +91,17 @@ module.exports = async function (env) {
       stats: 'none',
       optimization: { noEmitOnErrors: true },
       node: false,
+      watch: false,
       devServer: {
         watchOptions: {
           ignored: ignoreFolders
         },
-        contentBase: [path.resolve(__dirname, outputFolder)],
-        watchContentBase: !isProd,
+        //contentBase: [path.resolve(__dirname, outputFolder)],
+        //contentBase: [path.resolve(__dirname, './' + app)],
+        contentBase: [path.resolve(__dirname, './')],
+        //contentBase: __dirname,
+        //watchContentBase: !isProd,
+        watchContentBase: false,
         liveReload: !isProd,
         historyApiFallback: !isProd,
         host: host,

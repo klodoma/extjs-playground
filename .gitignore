@@ -1,3 +1,4 @@
 /node_modules
 /app-1/*.log
 /modern-app/*.log
+/build

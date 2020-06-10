@@ -17,7 +17,7 @@ Ext.define('App1.view.home.HomeView', {
 			me.setHtml(html);
 		});
 	},
-    html: `<div style="user-select: text !important;">Welcome to the Ext JS 7.2 Modern Desktop Template Application!
+    html: `<div style="user-select: text !important;">Welcome to the Ext JS 7.2 Modern Desktop Template Application!111111
 <br><br>
 This template has the standard architecture for a desktop application
 <br>
