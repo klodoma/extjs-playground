@@ -35,4 +35,5 @@ Ext.define('App2.view.main.MainViewModel', {
 			autoLoad: true
 		}
 	}
+
 });

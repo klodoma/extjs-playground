@@ -1,1 +1,0 @@
-# ModernApp shared/app

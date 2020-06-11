@@ -78,7 +78,8 @@ module.exports = async function (env) {
         //path: path.join(__dirname, outputFolder),
         //publicPath: path.join(__dirname, outputFolder),
         path: path.join(__dirname, './' + app),
-        publicPath: path.join(__dirname, './' + app),
+        //publicPath: path.join(__dirname, './' + app),
+        publicPath: app,
         //publicPath: path.join(__dirname, './'),
         filename: bundleFormat
       },
@@ -91,7 +92,7 @@ module.exports = async function (env) {
       stats: 'none',
       optimization: { noEmitOnErrors: true },
       node: false,
-      watch: false,
+      watch: true,
       devServer: {
         watchOptions: {
           ignored: ignoreFolders

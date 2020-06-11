@@ -3,9 +3,9 @@
   "namespace": "App1",
   "version": "1.0.0.0",
   "framework": "ext",
-  "template": "moderndesktop",
+  "template": "universalmodern",
   "indexHtmlPath": "index.html",
-  "requires": [
+  "requires": [ 
     "font-awesome"
   ],
 
@@ -17,6 +17,28 @@
         "generated": {
           "var": "${build.id}/sass/save.scss",
           "src": "${build.id}/sass/save"
+        }
+      }
+    },
+    "phone": {
+      "toolkit": "modern",
+      "theme": "theme-material",
+      "sass": {
+        "generated": {
+          "var": "${build.id}/sass/save.scss",
+          "src": "${build.id}/sass/save"
+        }
+      }
+    },
+    "android": {
+      "packager": "cordova",
+      "toolkit": "modern",
+      "theme": "theme-material",
+      "cordova" : {
+        "config": {
+          "platforms": "android",
+          "id": "com.mydomain.MyApp1",
+          "name": "MyApp1"
         }
       }
     }
@@ -43,9 +65,7 @@
 
   "resources": [
     { "path": "resources", "output": "shared" }
-
     ,{ "path": "resources/${build.id}" }
-
   ],
 
   "output": {
@@ -61,7 +81,7 @@
   },
   
   "fashion": {
-   "missingParameters": "error",
+    "missingParameters": "error",
     "inliner": {"enable": false}
   },
 
@@ -75,10 +95,6 @@
       "bundle": false
     }
   ],
-
-  "classic": {"js": []},
-  "modern": {"js": []},
-
   "css": [
     {
       "path": "${build.out.css.path}",
@@ -132,8 +148,8 @@
   },
 
   "cache": {
-      "enable": false,
-      "deltas": "${build.id}/deltas"
+    "enable": false,
+    "deltas": "${build.id}/deltas"
   },
 
   "appCache": {
@@ -142,7 +158,9 @@
     "fallback": []
   },
 
+
   "archivePath": "archive/${build.id}",
+
   "ignore": ["(^|/)CVS(/?$|/.*?$)"],
-  "id": "41eec893-4ed6-40ff-bf77-bef2c1dce9fe"
+  "id": "4f4ad740-bf0c-4ef1-9728-c05b1b781dca"
 }

@@ -30,7 +30,7 @@ Ext.define('App2.view.main.MainViewController', {
 			return;
 		}
 		if(!menuview.getStore()) {
-			console.log('Store not yet avalable from viewModel binding');
+			console.log('Store not yet available from viewModel binding');
 			return;
 		}
 
@@ -84,4 +84,5 @@ Ext.define('App2.view.main.MainViewController', {
 		this.getView().destroy();
 		Ext.Viewport.add([{ xtype: 'loginview'}]);
 	}
+
 });

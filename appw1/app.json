@@ -6,10 +6,20 @@
   "template": "moderndesktop",
   "indexHtmlPath": "index.html",
   "requires": [
-    "font-awesome"
+    "font-awesome", "foo"
   ],
 
   "builds": {
+    "native": {
+      "packager": "cordova",
+      "cordova": {
+        "config": {
+          "platforms": "android",
+          "id": "com.klodoma.appw1",
+          "name": "Appw1"
+        }
+      }
+    },
     "desktop": {
       "toolkit": "modern",
       "theme": "theme-material",

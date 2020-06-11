@@ -3,7 +3,10 @@ Ext.define('App1.view.home.HomeView', {
     cls: 'homeview',
     controller: { type: 'homeviewcontroller' },
     viewModel: { type: 'homeviewmodel' },
-    requires: [],
+    requires: [
+    	'Foo.Const',
+		'Foo.Calc'
+	],
     extend: 'Ext.Container',
     scrollable: true,
 	initialize: function(){
@@ -12,13 +15,14 @@ Ext.define('App1.view.home.HomeView', {
 			let html = me.getHtml();
 			let jquery = typeof ($) !== 'undefined';
 			let underscore = typeof (_) !== 'undefined';
-			html += "Jquery" + jquery + "<br>";
-			html += "Underscore" + underscore;
+			html += "<hr/>";
+			html += "Jquery: " + jquery + "<br/>";
+			html += "Underscore: " + underscore;
+			html += "<br/>" + Foo.Calc.percentage(500, 35, 2) + '%';
 			me.setHtml(html);
 		});
 	},
-    html: `<div style="user-select: text !important;">Welcome to the Ext JS 7.2 Modern Desktop Template Application!111111
-<br><br>
+    html: `<div style="user-select: text !important;">Welcome to the Ext JS 7.2 Modern Desktop Template Application!1
 This template has the standard architecture for a desktop application
 <br>
 - header and footer with custom buttons and text

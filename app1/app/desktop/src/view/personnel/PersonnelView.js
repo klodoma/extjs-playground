@@ -5,11 +5,8 @@ Ext.define('App1.view.personnel.PersonnelView',{
     requires: ['Ext.grid.rowedit.Plugin'],
     controller: {type: 'personnelviewcontroller'},
     viewModel: {type: 'personnelviewmodel'},
-    store: {type: 'personnelviewstore'},
+    store: {type: 'personnelshared'},
     grouped: true,
-    groupFooter: {
-        xtype: 'gridsummaryrow'
-    },
     plugins: {
         rowedit: {
             autoConfirm: false

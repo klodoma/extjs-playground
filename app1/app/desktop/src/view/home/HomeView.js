@@ -1,13 +1,13 @@
-Ext.define('App1.view.home.HomeView', {
-    xtype: 'homeview',
-    cls: 'homeview',
-    controller: { type: 'homeviewcontroller' },
-    viewModel: { type: 'homeviewmodel' },
-    requires: [],
-    extend: 'Ext.Container',
-    scrollable: true,
+Ext.define('App1.view.home.HomeView',{
+	xtype: 'homeview',
+	cls: 'homeview',
+	controller: {type: 'homeviewcontroller'},
+	viewModel: {type: 'homeviewmodel'},
+	requires: [],
+	extend: 'Ext.Container',
+  scrollable: true,
 	initialize: function(){
-    	const me = this;
+		const me = this;
 		me.on('initialize', function () {
 			let html = me.getHtml();
 			let jquery = typeof ($) !== 'undefined';
@@ -17,7 +17,21 @@ Ext.define('App1.view.home.HomeView', {
 			me.setHtml(html);
 		});
 	},
-    html: `<div style="user-select: text !important;">Welcome to the Ext JS 7.2 Modern Desktop Template Application!
+  html: `<div style="user-select: text !important;">
+Welcome to the Ext JS 7.2 Modern Desktop Template Application!
+<br><br>
+To build a new ViewPackage, type the following in a command window:
+<br>
+- <span style="color:red;">ext-gen viewpackage --name employee --template grid</span> 
+- shortcut: <span style="color:red;">ext vp -n employee -t grid</span>
+<br><br>
+Simple Theming:
+<br><br>
+- go to 'app/desktop/sass/var.scss', uncomment one of the $base-color variables
+<br>
+- more adventurous? go to <span style="color:red;">'app/shared/sass/var.scss'</span> and uncomment all the lines
+<br><br><br>
+Description of this Template
 <br><br>
 This template has the standard architecture for a desktop application
 <br>
@@ -40,15 +54,5 @@ Notice that the menu allows you to select from several views,
 - Personnel
 <br><br>
 select the personnel menu item to see an example of a page with an Ext JS grid
-<br><br>
-To build a new ViewPackage, type the following in a command window:
-<br>
-- <span style="color:red;">ext-gen viewpackage employee</span> (shortcut: <span style="color:red;">ext vp employee</span>)
-<br><br>
-Simple Theming:
-<br><br>
-- go to 'app/desktop/sass/var.scss', uncomment one of the $base-color variables
-<br>
-- more adventurous? go to <span style="color:red;">'app/shared/sass/var.scss'</span> and uncomment all the lines
 </div>`
 });
