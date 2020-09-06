@@ -14,5 +14,3 @@ Sencha Ant Useful Commands:
 .\node_modules\.bin\sencha ant .props
 .\node_modules\.bin\sencha app watch --debug --web-server false classic development
 ```
-
-foo
