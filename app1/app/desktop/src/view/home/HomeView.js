@@ -10,10 +10,10 @@ Ext.define('App1.view.home.HomeView',{
 		const me = this;
 		me.on('initialize', function () {
 			let html = me.getHtml();
-			let jquery = typeof ($) !== 'undefined';
-			let underscore = typeof (_) !== 'undefined';
-			html += "Jquery" + jquery + "<br>";
-			html += "Underscore" + underscore;
+			html += "jquery$ " + (typeof ($) !== 'undefined') + "<br>";
+			html += "jquery " + (typeof (jquery) !== 'undefined') + "<br>";
+			html += "Underscore " + (typeof (underscore) !== 'undefined') + "<br>";
+			html += "moment " + (typeof (moment) !== 'undefined') + "<br>";
 			me.setHtml(html);
 		});
 	},

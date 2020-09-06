@@ -10,16 +10,6 @@
   ],
 
   "builds": {
-    "native": {
-      "packager": "cordova",
-      "cordova": {
-        "config": {
-          "platforms": "android",
-          "id": "com.klodoma.appw1",
-          "name": "Appw1"
-        }
-      }
-    },
     "desktop": {
       "toolkit": "modern",
       "theme": "theme-material",
@@ -27,6 +17,16 @@
         "generated": {
           "var": "${build.id}/sass/save.scss",
           "src": "${build.id}/sass/save"
+        }
+      }
+    },
+    "native": {
+      "packager": "cordova",
+      "cordova": {
+        "config": {
+          "platforms": "android",
+          "id": "com.klodoma.appw1",
+          "name": "Appw1"
         }
       }
     }

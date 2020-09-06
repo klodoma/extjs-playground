@@ -26,9 +26,11 @@
     "build": "npm run clean && cross-env webpack --env.profile=desktop --env.environment=production --env.treeshake=yes"
   },
   "dependencies": {
+    "@sencha/ext": "~7.2.0",
     "@sencha/ext-modern": "~7.2.0",
     "@sencha/ext-modern-theme-material": "~7.2.0",
-    "@sencha/ext": "~7.2.0"
+    "jquery": "^3.5.1",
+    "moment": "^2.27.0"
   },
   "devDependencies": {
     "@sencha/ext-webpack-plugin": "~7.2.0",

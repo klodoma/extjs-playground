@@ -87,10 +87,6 @@
 
   "js": [
     {
-      "path": "${workspace.dir}/vendor/jquery-3.5.1.min.js",
-      "bundle": false
-    },
-    {
       "path": "${workspace.dir}/vendor/underscore-min.js",
       "bundle": false
     }
@@ -110,8 +106,8 @@
 
   "production": {
     "js": [
-      {"path": "app.js", "bundle": true}
-//      {"path": "${app.webpack.bundle}"}
+      {"path": "app.js", "bundle": true},
+      {"path": "${app.webpack.bundle}"}
     ],
     "output": {
       "appCache": {
