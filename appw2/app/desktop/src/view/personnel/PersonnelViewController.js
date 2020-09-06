@@ -1,4 +1,4 @@
-Ext.define('App2.view.personnel.PersonnelViewController', {
+Ext.define('App.view.personnel.PersonnelViewController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.personnelviewcontroller',
 

@@ -1,6 +1,6 @@
-Ext.define('App2.model.Base', {
+Ext.define('App.model.Base', {
 	extend: 'Ext.data.Model',
 	schema: {
-		namespace: 'App2.model'
+		namespace: 'App.model'
 	}
 });

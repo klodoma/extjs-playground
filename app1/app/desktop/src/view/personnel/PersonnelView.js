@@ -1,4 +1,4 @@
-Ext.define('App1.view.personnel.PersonnelView',{
+Ext.define('App.view.personnel.PersonnelView',{
     extend: 'Ext.grid.Grid',
     xtype: 'personnelview',
     cls: 'personnelview',

@@ -1,4 +1,4 @@
 Ext.application({
-	extend: 'App1.Application',
-	name: 'App1'
+	extend: 'App.Application',
+	name: 'App'
 });

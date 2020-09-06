@@ -1,4 +1,4 @@
-Ext.define('App1.view.nav.menu.MenuView', {
+Ext.define('App.view.nav.menu.MenuView', {
     extend: 'Ext.list.Tree',
     xtype: 'menuview',
     viewModel: {},

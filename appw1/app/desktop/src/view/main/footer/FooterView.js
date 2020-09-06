@@ -1,4 +1,4 @@
-Ext.define('App1.view.main.footer.FooterView', {
+Ext.define('App.view.main.footer.FooterView', {
     extend: 'Ext.Toolbar',
     xtype: 'footerview',
     cls: 'footerview',

@@ -1,4 +1,4 @@
-Ext.define('App2.view.main.MenuViewController', {
+Ext.define('App.view.main.MenuViewController', {
 	extend: 'Ext.app.ViewController',
 	alias: 'controller.menuviewcontroller',
 

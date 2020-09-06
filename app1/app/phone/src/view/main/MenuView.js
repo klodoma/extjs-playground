@@ -1,4 +1,4 @@
-Ext.define('App1.view.main.MenuView', {
+Ext.define('App.view.main.MenuView', {
 	extend: 'Ext.Sheet',
 	xtype: 'menuview',
 	controller: 'menuviewcontroller',

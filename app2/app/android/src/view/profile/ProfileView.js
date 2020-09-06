@@ -1,4 +1,4 @@
-Ext.define('App2.view.profile.ProfileView',{
+Ext.define('App.view.profile.ProfileView',{
 	extend: 'Ext.panel.Panel',
 	xtype: 'profileview',
 	controller: 'profileviewcontroller',

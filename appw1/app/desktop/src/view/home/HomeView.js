@@ -1,4 +1,4 @@
-Ext.define('App1.view.home.HomeView', {
+Ext.define('App.view.home.HomeView', {
     xtype: 'homeview',
     cls: 'homeview',
     controller: { type: 'homeviewcontroller' },

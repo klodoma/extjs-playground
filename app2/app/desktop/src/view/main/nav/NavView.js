@@ -1,4 +1,4 @@
-Ext.define('App2.view.main.nav.NavView', {
+Ext.define('App.view.main.nav.NavView', {
 	extend: 'Ext.Panel',
 	xtype: 'navview',
 	controller: "navviewcontroller",

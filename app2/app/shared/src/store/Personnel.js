@@ -1,7 +1,7 @@
-Ext.define('App2.store.Personnel', {
+Ext.define('App.store.Personnel', {
     extend: 'Ext.data.Store',
     alias: 'store.personnelshared',
-    model: 'App2.model.Personnel',
+    model: 'App.model.Personnel',
     groupField: 'dept',
     data: { items: [
         { name: 'Jean Luc', email: "jeanluc.picard@enterprise.com", phone: "555-111-1111", dept: "bridge" },

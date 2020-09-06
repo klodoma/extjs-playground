@@ -1,4 +1,4 @@
-Ext.define('App1.view.main.MainView', {
+Ext.define('App.view.main.MainView', {
     extend: 'Ext.Container',
     xtype: 'mainview',
     controller: 'mainviewcontroller',

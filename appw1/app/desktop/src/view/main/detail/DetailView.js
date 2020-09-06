@@ -1,4 +1,4 @@
-Ext.define('App1.view.main.detail.DetailView', {
+Ext.define('App.view.main.detail.DetailView', {
 	extend: 'Ext.Container',
 	xtype: 'detailview',
   cls: 'detailview',

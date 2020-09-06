@@ -1,6 +1,6 @@
 {
   "name": "Appw1",
-  "namespace": "App1",
+  "namespace": "App",
   "version": "1.0.0.0",
   "framework": "ext",
   "template": "moderndesktop",
@@ -36,7 +36,7 @@
   "overrides": ["app/shared/overrides","app/${build.id}/overrides"],
 
   "sass": {
-    "namespace": "App1",
+    "namespace": "App",
 
     "etc": [
       "sass/etc/all.scss"

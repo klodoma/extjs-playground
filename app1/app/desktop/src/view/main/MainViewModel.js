@@ -1,8 +1,8 @@
-Ext.define('App1.view.main.MainViewModel', {
+Ext.define('App.view.main.MainViewModel', {
 	extend: 'Ext.app.ViewModel',
 	alias: 'viewmodel.mainviewmodel',
 	data: {
-		name: 'App1',
+		name: 'App',
 		navCollapsed:       false,
 		navview_max_width:    300,
 		navview_min_width:     44,

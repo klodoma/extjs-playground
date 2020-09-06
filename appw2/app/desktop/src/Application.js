@@ -1,7 +1,7 @@
-Ext.define('App2.Application', {
+Ext.define('App.Application', {
 	extend: 'Ext.app.Application',
-	name: 'App2',
-	requires: ['App2.*'],
+	name: 'App',
+	requires: ['App.*'],
 	defaultToken: 'homeview',
 
 	removeSplash: function () {

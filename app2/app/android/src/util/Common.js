@@ -1,4 +1,4 @@
-Ext.define('App2.util.Common', {
+Ext.define('App.util.Common', {
 	alternateClassName: ['Common'],
 	singleton: true,
 

@@ -1,1 +1,1 @@
-# App2 shared/app
+# App shared/app

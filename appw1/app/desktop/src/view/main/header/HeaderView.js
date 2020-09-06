@@ -1,4 +1,4 @@
-Ext.define('App1.view.main.header.HeaderView', {
+Ext.define('App.view.main.header.HeaderView', {
     extend: 'Ext.Toolbar',
     xtype: 'headerview',
     cls: 'headerview',

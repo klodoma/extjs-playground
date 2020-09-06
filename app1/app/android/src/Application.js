@@ -1,8 +1,8 @@
-Ext.define('App1.Application', {
+Ext.define('App.Application', {
 	extend: 'Ext.app.Application',
-	name: 'App1',
+	name: 'App',
 	requires: [
-		'App1.*',
+		'App.*',
 		'Ext.dataview.List',
 		'Ext.field.Date',
 		'Ext.Video',

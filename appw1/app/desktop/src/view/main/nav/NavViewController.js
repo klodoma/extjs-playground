@@ -1,4 +1,4 @@
-Ext.define('App1.view.main.nav.NavViewController', {
+Ext.define('App.view.main.nav.NavViewController', {
 	extend: "Ext.app.ViewController",
 	alias: "controller.navviewcontroller",
 

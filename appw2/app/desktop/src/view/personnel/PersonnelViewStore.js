@@ -1,4 +1,4 @@
-Ext.define('App2.view.personnel.PersonnelViewStore', {
+Ext.define('App.view.personnel.PersonnelViewStore', {
     extend: 'Ext.data.Store',
     alias: 'store.personnelviewstore',
     fields: [

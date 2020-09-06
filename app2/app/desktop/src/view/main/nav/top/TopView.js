@@ -1,4 +1,4 @@
-Ext.define('App2.view.main.nav.top.TopView', {
+Ext.define('App.view.main.nav.top.TopView', {
 	extend: 'Ext.Toolbar',
 	xtype: 'topview',
 	cls: 'topview',
